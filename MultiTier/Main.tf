@@ -22,18 +22,6 @@ provider "aws" {
   region = "us-east-1"
 }
 
-/* data "aws_vpcs" "existing" {}
-
-data "aws_vpc" "selected" {
-  id = data.aws_vpcs.existing.ids[0]
-}
-
-data "aws_subnets" "available" {
-  filter {
-    name   = "vpc-id"
-    values = [data.aws_vpc.selected.id]
-  }
-} */
 
 module "vpc" {
   source              = "./modules/vpc"
